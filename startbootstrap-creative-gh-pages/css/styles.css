@@ -10,6 +10,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ html{
+  overflow-x: hidden;
+ }
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11416,7 +11420,7 @@ hr.divider-light {
   }
 }
 
-header.masthead {
+header.masthead{
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
@@ -11426,26 +11430,58 @@ header.masthead {
   background-size: cover;
 }
 
-header.masthead h1, header.masthead .h1 {
+header.masthead-services{
+  height: 30rem;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(200, 200, 200, 0.8) 100%), url("../assets/img/bg-services.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.masthead-download{
+  height: 100%;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(200, 200, 200, 0.8) 100%), url("../assets/img/bg-download.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.masthead h1, header.masthead .h1,
+header.masthead-services h1, header.masthead-services .h1,
+header.masthead-download h1, header.masthead-download .h1{
   font-size: 2.25rem;
 }
 
 @media (min-width: 992px) {
-  header.masthead {
+  header.masthead,
+  header.masthead-services 
+  header.masthead-download {
     height: 100vh;
     min-height: 40rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
-  header.masthead p {
+  header.masthead p,
+  header.masthead-services p,
+  header.masthead-download p {
     font-size: 1.15rem;
   }
-  header.masthead h1, header.masthead .h1 {
+  header.masthead h1, header.masthead .h1,
+  header.masthead-services h1, header.masthead-services .h1,
+  header.masthead-download h1, header.masthead-download .h1 {
     font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
-  header.masthead h1, header.masthead .h1 {
+  header.masthead h1, header.masthead .h1,
+  header.masthead-services h1, header.masthead-services .h1,
+  header.masthead-download h1, header.masthead-download .h1 {
     font-size: 3.5rem;
   }
 }
@@ -11469,7 +11505,7 @@ header.masthead h1, header.masthead .h1 {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   transition: opacity 0.25s ease;
   text-align: center;
 }
@@ -11494,14 +11530,14 @@ header.masthead h1, header.masthead .h1 {
 }
 
 .fundo-about{
-  background-color: #22B3A9;
+  background: linear-gradient(to bottom, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 1) 100%);
   width: 100%;
   height: 100%;
 }
 
 .titulo-about{
   font-size: 40pt;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   color: white;
 }
 
